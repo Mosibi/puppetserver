@@ -1,0 +1,13 @@
+---
+:hierarchy:
+ - environments/%{environment}/nodes/%{::fqdn}
+ - environments/%{environment}/roles/%{::role}
+ - environments/%{environment}/common
+ - roles/%{::role}
+ - common
+:backends:
+# - puppetdb
+ - yaml
+:merge_behavior: deeper
+:yaml:
+ :datadir: /etc/puppetlabs/code/hieradata
